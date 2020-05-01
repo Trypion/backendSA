@@ -1,0 +1,61 @@
+INSERT INTO perfil (id, nome, email) values (123456789, 'Israel Schmitt', 'israel_s_joaquim@estudante.sc.senai.br');
+INSERT INTO perfil (id, nome, email) values (987654321, 'Fabio Koerich', 'fabio_koerich@estudante.sc.senai.br');
+INSERT INTO perfil (id, nome, email) values (987456321, 'Alan Campagnaro', 'alan_campagnaro@estudante.sc.senai.br');
+
+INSERT INTO itens (id, nome_eq, gps, validade) values (123456789, 'valvula', '-27.619684, -48.647697', '11/2022');
+INSERT INTO itens (id, nome_eq, gps, validade, email_op) values (987456321, 'mangueira', '-27.619684, -48.647697', '12/2008', 'senai@senai.br');
+INSERT INTO itens (id, nome_eq, gps, validade) values (987654321, 'extintor', '-27.619684, -48.647697', '08/2023');
+
+===========================================================================================
+RELATORIO DE BUSCA
+
+=============================================================================================
+SELECT
+
+=====PERFIL=========
+
+//no login verificar se o usuario já possui cadastro no banco
+SELECT * FROM perfil WHERE id = ?;
+
+//email para notificação
+SELECT email FROM perfil WHERE id = ?;
+
+=====ITENS===========
+
+//carregar lista de equipamentos
+SELECT (cod_item, nome_eq, gps, validade) FROM itens WHERE id = ?;
+
+//carregar mapa das validades
+SELECT (gps, validade) FROM itens;
+
+==============================================================================================
+UPDATE
+
+====PERFIL========
+//atualizar um perfil
+UPDATE perfil SET nome=?, email=? WHERE id =?;
+
+====ITENS=========
+//atualizar alguma info de um item
+UPDATE itens SET nome_eq=?, gps=?, validade=?, email_op=? WHERE cod_item =?;
+
+===============================================================================================
+DELETE
+
+====PERFIL=======
+//para deletar um perfil
+DELETE FROM itens WHERE id=?;
+DELETE FROM perfil WHERE id=?;
+
+====ITENS========
+//deletar apenas um item cadastrado
+DELETE FROM itens WHERE cod_item=?;
+
+//deletar todas os itens cadastrado do perfil
+DELETE FROM itens WHERE id=?;
+
+
+
+
+
+
