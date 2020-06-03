@@ -1,17 +1,16 @@
 
 CREATE TABLE public.perfil (
-                ID NUMERIC(38) NOT NULL,
+                ID VARCHAR(50)NOT NULL,
                 nome VARCHAR(50) NOT NULL,
                 email VARCHAR(50) NOT NULL,
                 CONSTRAINT perfil_pk PRIMARY KEY (ID)
 );
 
-
 CREATE SEQUENCE public.itens_cod_item_seq;
 
 CREATE TABLE public.itens (
                 cod_item NUMERIC(6) NOT NULL DEFAULT nextval('public.itens_cod_item_seq'),
-                ID NUMERIC(38) NOT NULL,
+                ID VARCHAR(50) NOT NULL,
                 nome_eq VARCHAR(50) NOT NULL,
                 gps VARCHAR(50) NOT NULL,
                 validade VARCHAR(50) NOT NULL,
