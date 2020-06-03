@@ -15,7 +15,7 @@ CREATE TABLE public.itens (
                 gps VARCHAR(50) NOT NULL,
                 validade VARCHAR(50) NOT NULL,
                 email_op VARCHAR(50),
-                CONSTRAINT itens_pk PRIMARY KEY (cod_item)
+                CONSTRAINT itens_pk PRIMARY KEY (id)
 );
 
 
