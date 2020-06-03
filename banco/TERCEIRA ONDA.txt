@@ -2,9 +2,9 @@ INSERT INTO perfil (id, nome, email) values ('123456789', 'Israel Schmitt', 'isr
 INSERT INTO perfil (id, nome, email) values ('987654321', 'Fabio Koerich', 'fabio_koerich@estudante.sc.senai.br');
 INSERT INTO perfil (id, nome, email) values ('987456321', 'Alan Campagnaro', 'alan_campagnaro@estudante.sc.senai.br');
 
-INSERT INTO itens (id, nome_eq, gps, validade) values ('123456789', 'valvula', '-27.619684, -48.647697', '11/2022');
-INSERT INTO itens (id, nome_eq, gps, validade, email_op) values ('987456321', 'mangueira', '-27.619684, -48.647697', '12/2008', 'senai@senai.br');
-INSERT INTO itens (id, nome_eq, gps, validade) values ('987654321', 'extintor', '-27.619684, -48.647697', '08/2023');
+INSERT INTO itens (perfil, nome, gps, validade) values ('123456789', 'valvula', '-27.619684, -48.647697', '11/2022');
+INSERT INTO itens (perfil, nome, gps, validade, email_op) values ('987456321', 'mangueira', '-27.619684, -48.647697', '12/2008', 'senai@senai.br');
+INSERT INTO itens (perfil, nome, gps, validade) values ('987654321', 'extintor', '-27.619684, -48.647697', '08/2023');
 
 ===========================================================================================
 RELATORIO DE BUSCA

@@ -11,7 +11,7 @@ CREATE SEQUENCE public.itens_id_seq;
 CREATE TABLE public.itens (
                 ID NUMERIC(6) NOT NULL DEFAULT nextval('public.itens_id_seq'),
                 perfil VARCHAR(50) NOT NULL,
-                nome_eq VARCHAR(50) NOT NULL,
+                nome VARCHAR(50) NOT NULL,
                 gps VARCHAR(50) NOT NULL,
                 validade VARCHAR(50) NOT NULL,
                 email_op VARCHAR(50),
